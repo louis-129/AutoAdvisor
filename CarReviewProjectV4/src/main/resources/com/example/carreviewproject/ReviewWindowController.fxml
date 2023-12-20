@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="475.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carreviewproject.ReviewWindowController">
+
+    <VBox alignment="CENTER" spacing="10">
+        <Label style="-fx-font-size: 24 Consolas;" text="Select a review type and cycle through the reviews :)" translateX="40" />
+        <Label text="Review Type:" translateX="-210" translateY="5" />
+        <ComboBox fx:id="reviewTypeComboBox" onAction="#onReviewTypeSelected" translateX="-195" translateY="0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Car" />
+                    <String fx:value="Motorcycle" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Button fx:id="nextButton" onAction="#onNextReviewButtonClick" text="Next Review" translateX="-50" translateY="-35" />
+
+        <Label style="-fx-font-size: 18;" text="Review Details" translateX="-195" translateY="-15" />
+
+        <HBox translateX="10" translateY="-10">
+            <Label text="Username:" />
+            <Label fx:id="usernameLabel" />
+        </HBox>
+
+        <HBox translateX="10" translateY="-10">
+            <Label text="Review Score:" />
+            <Label fx:id="scoreLabel" />
+        </HBox>
+
+        <HBox translateX="10" translateY="-10">
+            <Label text="Make:" />
+            <Label fx:id="makeLabel" />
+        </HBox>
+
+        <HBox translateX="10" translateY="-10">
+            <Label text="Model:" />
+            <Label fx:id="modelLabel" />
+        </HBox>
+
+        <HBox translateX="10" translateY="-10">
+            <Label text="Year:" />
+            <Label fx:id="yearLabel" />
+        </HBox>
+
+        <HBox translateX="10" translateY="-10">
+            <Label fx:id="mpgLabel" text="MPG:" />
+        </HBox>
+
+        <HBox translateX="10" translateY="-36">
+            <Label fx:id="milesPerKWHLabel" text="Miles Per KWH:" visible="false"/>
+        </HBox>
+
+        <HBox translateX="10" translateY="-40">
+            <Label fx:id="estimatedFuelCostLabel" text="Estimated Annual Fuel Cost:" />
+        </HBox>
+
+        <VBox alignment="CENTER" spacing="10">
+            <HBox translateX="10" translateY="-10">
+                <Label text="Review:" />
+                <ScrollPane fitToWidth="true" fitToHeight="true" maxHeight="150" vbarPolicy="ALWAYS">
+                    <content>
+                        <Label fx:id="reviewLabel" wrapText="true" prefWidth="450" prefHeight="300"/>
+                    </content>
+                </ScrollPane>
+            </HBox>
+        </VBox>
+
+
+
+
+    </VBox>
+
+</AnchorPane>

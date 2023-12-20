@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="510.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carreviewproject.HelloController">
+    <Label text="Please fill out all fields" translateX="0" translateY="-30" textAlignment="CENTER" style="-fx-font: 24 consolas;"/>
+    <Label text="Username:" translateX="-230" />
+    <TextField fx:id="usernameField" prefHeight="25.0" promptText="Enter username" maxWidth="200.0" translateX="-160"/>
+
+    <Label text="Type:" translateX="130" translateY="-45"/>
+    <ComboBox fx:id="reviewTypeComboBox" promptText="Select review type" translateX="185" translateY="-45">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Car" />
+                <String fx:value="Motorcycle" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+
+
+    <Label text="Make:" translateX="130" translateY="-40"/>
+    <ComboBox fx:id="makeDropdown" promptText="Select make" translateX="185" translateY="-40" prefWidth="145">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <!-- populates when the program runs no need to add anything here like in html -->
+            </FXCollections>
+        </items>
+
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <!-- populates when the program runs no need to add anything here like in html -->
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Label text="Review Score:" translateX="-220" translateY="-80"/>
+    <TextField fx:id="reviewScoreField" promptText="Enter rating (1 - 10)" maxWidth="120.0" translateX="-200" translateY="-80"/>
+
+    <Label text="Model:" translateX="-240" translateY="-75"/>
+    <TextField fx:id="modelField"  promptText="Enter car or motorcycle model" maxWidth="200.0" translateX="-160" translateY="-75"/>
+
+    <Label text="Year:" translateX="-245" translateY="-70"/>
+    <TextField fx:id="yearField"  promptText="Year" maxWidth="60.0" translateX="-230" translateY="-70"/>
+
+    <Label text="Review:" translateX="-237" translateY="-70"/>
+    <TextField fx:id="reviewField"  promptText="Enter review text" maxWidth="300.0" minHeight="100" translateX="-110" translateY="-70"/>
+
+    <Label text="Fuel Type:" translateX="142" translateY="-275"/>
+    <ComboBox fx:id="fuelTypeDropdown" promptText="Select fuel type" translateX="185" translateY="-275" maxWidth="145.0" prefWidth="200">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="GASOLINE" />
+                <String fx:value="ETHANOL" />
+                <String fx:value="DIESEL" />
+                <String fx:value="ELECTRICITY" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+        <Label fx:id="mpgFieldLabel" visible="false" text="MPG:" translateX="129" translateY="-262"/>
+        <TextField fx:id="mpgField" visible="false" promptText="Enter MPG" maxWidth="145.0" prefWidth="200" translateX="185" translateY="-262"/>
+
+        <Label fx:id="milesPerKwhFieldLabel"  visible="false" text="Miles per KWH:" translateX="155" translateY="-305"/>
+        <TextField fx:id="milesPerKwhField"  visible="false" promptText="Enter miles per KWH" maxWidth="145.0" prefWidth="200"  translateX="185" translateY="-305"/>
+
+    <Button onAction="#onAddReviewButtonClick" text="Add Review" translateY="-50"/>
+</VBox>
